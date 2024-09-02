@@ -323,7 +323,7 @@
                     card.style.display = 'none';
                 }
             });
-        }
+        } 
 
         const searchInput = document.getElementById('searchInput');
         searchInput.addEventListener('input', applySearchFilter);
@@ -334,11 +334,11 @@
             filterContainer.style.display = filterContainer.style.display === 'none' ? 'block' : 'none';
         });
 
-        const filterForm = document.getElementById('filterForm');
+        {% comment %} const filterForm = document.getElementById('filterForm');
         filterForm.addEventListener('submit', function(event) {
             event.preventDefault();
             applyFilters();
-        });
+        }); {% endcomment %}
 
         function applyFilters() {
             const city = document.getElementById('city').value;

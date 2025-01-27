@@ -52,7 +52,7 @@ def allRegistered(request):
     if(res.json().get('message_code')==1000):
         all_data=res.json().get('message_data')
         # print(all_data)
-        city_response = requests.post("https://drishti.app/drishti_masters/api/get_cities_by_state_id/",json={"state_id":22})
+        city_response = requests.post("https://drishtis.app/drishti_masters/api/get_cities_by_state_id/",json={"state_id":22})
         cities = (city_response.json().get("message_data", [])).get('cities',[])
         # print(cities)
         # return render(request,'main/allRegistered.html',{'all_doctors':all_doctors})
